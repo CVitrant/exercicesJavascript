@@ -69,6 +69,28 @@ function tabUn() {
     document.getElementById("showtab").innerHTML = 'Les tableaux sont ' + var1 + ' ,' + var2 + ' ,' + var3 + '. Leurs premières valeurs sont' + var1[0] + ' ' + var2[0] + ' ' + var3[0];
 }
 
+function urlshow() {
+    let var1 = document.getElementById("valurl").value;  
+                // Create anchor element.
+                var a = document.createElement('a'); 
+                  
+                // Create the text node for anchor element.
+                var link = document.createTextNode(var1);
+                  
+                // Append the text node to anchor element.
+                a.appendChild(link); 
+                  
+                // Set the title.
+                a.title = var1; 
+                  
+                // Set the href property.
+                a.href = var1; 
+                  
+                // Append the anchor element to the body.
+                document.getElementById("showurl").prepend(a);
+}
+
+
 function reste() {
     let var1 = parseInt(document.getElementById("valres1").value) ; 
     let var2 = parseInt(document.getElementById("valres2").value);
@@ -87,5 +109,23 @@ function hourToSec() {
     document.getElementById("showhsec").innerHTML = tmp;
 }
 
+function infeZero() {
+    let tmp = parseInt(document.getElementById("valinze").value);
+    document.getElementById("showinze").innerHTML = tmp <= 0 ? tmp + ' est inférieur ou égal à zéro' : tmp + ' est supérieur à zéro';
+}
 
+
+function egaux() {
+    let var1 = parseInt(document.getElementById("valega1").value);
+    let var2 = parseInt(document.getElementById("valega2").value);
+    document.getElementById("showega").innerHTML = var1 == var2 ? ' Les valeurs sont égales ' : ' Les valeurs ne sont pas égales';
+}
+
+
+function hourAMinToSec() {
+    let hours = parseInt(document.getElementById("valhmsec1").value);
+    let minutes = parseInt(document.getElementById("valhmsec2").value);
+    let somme = hours * 360 + minutes * 60;
+    document.getElementById("showhmsec").innerHTML = hours + ' et ' + minutes + ' en secondes est égal à ' + somme + ' secs.';
+}
 
