@@ -129,3 +129,39 @@ function hourAMinToSec() {
     document.getElementById("showhmsec").innerHTML = hours + ' et ' + minutes + ' en secondes est égal à ' + somme + ' secs.';
 }
 
+function retourneTab() {
+    let var1 = [1, 2, 3];
+    let var2 = [50, 60, 70];
+    let var3 = [20, 35, 60];
+    
+    let tmpTab = [];
+    for(let i = 0; i < var1.length; i++) {
+        tmpTab[i] = var1[var1.length-i-1];
+    }
+    
+    document.getElementById("showretab").innerHTML = tmpTab;
+}
+
+function retourneLastTab() {
+    let var1 = [50, 60, 70];
+    
+    let tmp = var1[var1.length-1];
+    
+    document.getElementById("showlastab").innerHTML = 'Le tableau est ' + var1 + ' et le dernier élément est ' + tmp;
+}
+
+
+
+function egalS() {
+    let var1 = '5';
+    let var2 = 5;
+    
+    document.getElementById("showegas").innerHTML ='Les valeurs sont '+ var1 + ' et ' + var2 + '. Résultat : ' + (var1 === var2 ? ' Les valeurs sont strictement égales ' : ' Les valeurs ne sont pas strictement égales');
+}
+
+
+
+function chaineVide() {
+    let tmp = document.getElementById("valcavi").value;
+    document.getElementById("showcavi").innerHTML = tmp === ('') ? ' La chaine de caractères est vide ' : ' La chaine de caractère nest pas vide';
+}
